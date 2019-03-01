@@ -2,11 +2,12 @@
 #include "../cpu/timer.h"
 #include "../drivers/keyboard.h"
 
-void main() {
+void main()
+{
     isr_install();
 
     asm volatile("sti");
-    init_timer(50);
+    // init_timer(1);
     /* Comment out the timer IRQ handler to read
      * the keyboard IRQs easier */
     init_keyboard();
